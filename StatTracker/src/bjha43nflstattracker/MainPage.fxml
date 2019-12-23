@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bjha43nflstattracker.MainPageController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: DARKBLUE;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="usernameLabel" alignment="TOP_CENTER" text="Football Statistics" textFill="#e1f723" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Informal Roman" size="64.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="7">
+               <children>
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateAction" prefWidth="65.0" text="Update" />
+                  <Label contentDisplay="TOP" text="Player" textFill="#f6f8f8">
+                     <graphic>
+                        <ChoiceBox fx:id="playerName" prefWidth="150.0" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="Year" textFill="#f6f8f8">
+                     <graphic>
+                        <ChoiceBox fx:id="yearChoice" prefWidth="150.0" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="TOP" layoutX="160.0" layoutY="10.0" text="Stat Type" textFill="#f6f8f8">
+                     <graphic>
+                        <ChoiceBox fx:id="statChoice" prefWidth="150.0" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="TOP" text="Stat Value to Add" textFill="#fcfafa">
+                     <graphic>
+                        <TextField fx:id="statText" text="0" />
+                     </graphic>
+                  </Label>
+               </children>
+            </HBox>
+            <MenuBar style="-fx-background-color: GREY;" GridPane.columnSpan="5" GridPane.valignment="TOP">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#exitAction" text="Close" />
+                  </items>
+                </Menu>
+                <Menu fx:id="aboutMenu" mnemonicParsing="false" text="About">
+                     <items>
+                        <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#aboutAction" text="About" />
+                     </items></Menu>
+              </menus>
+            </MenuBar>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="4">
+              <columns>
+                <TableColumn fx:id="col_fname" prefWidth="87.0" text="First Name" />
+                <TableColumn fx:id="col_lname" prefWidth="93.0" text="Last Name" />
+                  <TableColumn fx:id="col_3" prefWidth="91.0" text="Passing Yards" />
+                  <TableColumn fx:id="col_4" prefWidth="97.0" text="Passing TD" />
+                  <TableColumn fx:id="col_5" prefWidth="228.0" text="Rushing Yards" />
+                  <TableColumn fx:id="col_6" prefWidth="117.0" text="Rushing TD" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="BOTTOM_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <children>
+                  <Button fx:id="filterButton" mnemonicParsing="false" onAction="#filterAction" text="Filter" textAlignment="CENTER" />
+                  <ChoiceBox fx:id="positionOption" prefWidth="150.0" />
+                  <ChoiceBox fx:id="yearOption" layoutX="180.0" layoutY="62.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <Label fx:id="errorLabel" alignment="TOP_CENTER" textAlignment="CENTER" textFill="#e41313" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="DotumChe" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

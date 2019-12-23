@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bjha43nflstattracker.LoginController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+         <children>
+            <TextField fx:id="userEntry" alignment="CENTER" text="bjha43">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Username" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </PasswordField>
+            <Label text="Password" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginAction" text="Login" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitAction" text="Exit" />
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteAction" text="Delete Account" />
+               </children>
+            </HBox>
+            <Label fx:id="failure" textFill="#e81f1f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label text="Fantasy Sports" textAlignment="CENTER" textFill="#dd1515" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS">
+         <font>
+            <Font name="Bernard MT Condensed" size="72.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+         <children>
+            <Label text="Username" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameText" alignment="CENTER">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fNameText" alignment="CENTER" layoutX="10.0" layoutY="30.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="62.0" text="Last Name" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lNameText" alignment="CENTER" layoutX="10.0" layoutY="82.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="114.0" text="Email Address" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailText" alignment="CENTER" layoutX="10.0" layoutY="82.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="114.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordText" alignment="CENTER" layoutX="10.0" layoutY="30.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </TextField>
+            <Button id="createUser" fx:id="createButton" alignment="CENTER" mnemonicParsing="false" onAction="#createAction" text="Create User" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>
